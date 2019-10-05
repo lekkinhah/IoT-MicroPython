@@ -10,4 +10,4 @@ def call_webhook():
     if response is not None and response.status_code < 400:
         print('Webhook invoked')
     else:
-        print('Webhook failed' )
+        print('Webhook failed')
