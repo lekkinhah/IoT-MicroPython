@@ -15,20 +15,12 @@ def read_output(value):
     ledred(0)
     ledblue(1)
     
-def read_outputTemp(valueT):
-  if valueT > 22:
-    ledyellow(0)
-    time.sleep(0.05)
-    ledyellow(1)
-  else:
-    ledyellow(0)
 
 def read():
   dht.measure()
   value_hum = dht.humidity()
   value_temp = dht.temperature()
   read_output(value_hum)
-  read_outputTemp(value_temp)
   return value_hum, value_temp
 
 
